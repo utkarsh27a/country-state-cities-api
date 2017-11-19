@@ -19,16 +19,24 @@ router.get('/states', function(req, res, next) {
   if (req.query.country == undefined) {
     return res.json({
       status: "fail",
-      message: "Invalid country",
+      message: "Invalid country.",
     });
   }
   var country = req.query.country.split(' ').join('_').toLocaleLowerCase();
-  console.log(country)
   res.json(states[country]);
 });
 
 router.get('/cities', function(req, res, next) {
-  res.json(cities);
+  if (req.query.country == undefined || req.query.state == undefined) {
+    return res.json({
+      status: "fail",
+      message: "Invalid country or state.",
+    });
+  }
+  console.log(country);
+  var country = req.query.country.split(' ').join('_').toLocaleLowerCase();
+  var state = req.query.state.split(' ').join('_').toLocaleLowerCase();
+  res.json(cities[country+"_"+state]);
 });
 
 
