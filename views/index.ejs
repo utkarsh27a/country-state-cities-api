@@ -22,19 +22,19 @@
         <div class="col-md-4">
           <div class="form-group">
              <label for="country">Country</label>
-            <select name="country" class="countries form-control select2" id="country">
+            <select name="country" class="countries form-control select2" id="id-country">
               <option>Select</option>
             </select>
             </div>
           <div class="form-group">
              <label for="state">State</label>
-            <select name="state" class="states form-control select2" id="state">
+            <select name="state" class="states form-control select2" id="id-state">
               <option>Select</option>
             </select>
             </div>
           <div class="form-group">
              <label for="city">City</label>
-            <select name="city" class="cities form-control select2" id="city">
+            <select name="city" class="cities form-control select2" id="id-city">
               <option>Select</option>
             </select>
           </div>
@@ -52,6 +52,7 @@
     <script type="text/javascript">
       $(function() {
         Location.init();
+        Events.init();
       })
     </script>
   </body>
