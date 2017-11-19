@@ -26,9 +26,10 @@
 		-  states -- key(country_name)  : values ( states array) pairs
 		-  cities -- key( country_name_state_name )  :  values ( cities array) pairs
 
-
 # Quick start
  - Clone this project
  - Go to directory and run following commands
  - npm install
  - npm start
+
+After Quick start you can open localhost:3000 in your browser to see the web demo of API.
