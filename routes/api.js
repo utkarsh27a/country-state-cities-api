@@ -4,40 +4,50 @@ countries = require("../db/countries");
 states = require("../db/states");
 cities = require("../db/cities");
 
+var success = (res, data, message = success) => {
+  if (data == undefined) {
+    data = [];
+  }
+  return res.json({
+    status: "success",
+    count: data.length,
+    message,
+    data
+  });
+}
+
+var fail = (res, message) => {
+  return res.json({
+    status: "fail",
+    message: message
+  });
+}
 
 router.get('/', function(req, res, next) {
-  res.json({
+  return res.json({
     version: 0.1
   });
 });
 
 router.get('/countries', function(req, res, next) {
-  res.json(countries);
+  return success(res, countries);
 });
 
 router.get('/states', function(req, res, next) {
-  if (req.query.country == undefined) {
-    return res.json({
-      status: "fail",
-      message: "Invalid country.",
-    });
+  if (req.query.country == undefined || req.query.country.length == 0) {
+    return fail(res, "Invalid country.");
   }
   var country = req.query.country.split(' ').join('_').toLocaleLowerCase();
-  res.json(states[country]);
+  return success(res, states[country]);
 });
 
 router.get('/cities', function(req, res, next) {
   if (req.query.country == undefined || req.query.state == undefined) {
-    return res.json({
-      status: "fail",
-      message: "Invalid country or state.",
-    });
+    return fail(res, "Invalid country or state.");
   }
-  console.log(country);
   var country = req.query.country.split(' ').join('_').toLocaleLowerCase();
   var state = req.query.state.split(' ').join('_').toLocaleLowerCase();
-  res.json(cities[country+"_"+state]);
+  return success(res, cities[country+"_"+state]);
 });
-
 
 module.exports = router;
