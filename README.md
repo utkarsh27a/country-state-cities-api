@@ -3,7 +3,7 @@
 
 
 # Technologies
-  - Node JS with express framework
+	- Node JS with express framework
 
 | API | URL | METHOD | PARAMS |
 | ------ | ------ | ------ | ------ |
@@ -14,17 +14,14 @@
 
 
 # Folder Structure
-│
-├── views - Cotains Templates
-│
-├── routes - Routes Goruping
-└──api -- api routes
-│
-│   └──web -- web routes
-│
-├── public - this directory contains static elements
-│
-├── db -- Contains data of countries, states and cities files
-      └── countries -- array of all countries
-      └── states -- key(country_name)  : values ( states array) pairs
-      └── cities -- key( country_name_state_name )  :  values ( cities array) pairs
+	- views - Cotains Templates
+	- routes - Routes Goruping
+		- api -- api routes
+		-  web -- web routes
+
+	- public - this directory contains static elements
+
+	-  db -- Contains data of countries, states and cities files
+		-  countries -- array of all countries
+		-  states -- key(country_name)  : values ( states array) pairs
+		-  cities -- key( country_name_state_name )  :  values ( cities array) pairs
