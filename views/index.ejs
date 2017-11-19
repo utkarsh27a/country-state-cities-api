@@ -12,23 +12,30 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
+          <h1><%= title %></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
           <div class="form-group">
-            <select name="country" class="countries form-control select2" id="countryId">
-              <option>Select Country</option>
+             <label for="country">Country</label>
+            <select name="country" class="countries form-control select2" id="country">
+              <option>Select</option>
             </select>
             </div>
           <div class="form-group">
-            <select name="state" class="states form-control select2" id="stateId">
-              <option>Select State</option>
+             <label for="state">State</label>
+            <select name="state" class="states form-control select2" id="state">
+              <option>Select</option>
             </select>
             </div>
           <div class="form-group">
-            <select name="city" class="cities form-control select2" id="cityId">
-              <option>Select City</option>
+             <label for="city">City</label>
+            <select name="city" class="cities form-control select2" id="city">
+              <option>Select</option>
             </select>
           </div>
         </div>
@@ -37,7 +44,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
