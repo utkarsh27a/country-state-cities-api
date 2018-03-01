@@ -1,4 +1,4 @@
-# Data Structure to fetch Cities of any Countries State Without Any DB
+# Data Structure to fetch Cities of any Country State Without Any DB
  A repo contains basic api to list Country > State > Cities
 
 
